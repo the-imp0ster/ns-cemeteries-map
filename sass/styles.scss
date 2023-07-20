@@ -1,0 +1,135 @@
+// ˏˋ°•*⁀➷ˏˋ°•*⁀➷ˏˋ°•*⁀➷ consts & variables
+@import url('https://fonts.googleapis.com/css2?family=Playfair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+$font-fancy: "Playfair", serif;
+$font-plain: "Comfortaa", sans-serif;
+$bg-color: wheat;
+$font-color: midnightblue;
+$accent-one: darkorchid;
+$accent-two: rosybrown;
+$accent-three: thistle;
+$accent-four: plum;
+$default-font-size: 1rem;
+
+// ˏˋ°•*⁀➷ˏˋ°•*⁀➷ˏˋ°•*⁀➷ global styles
+#g-base, html {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: $font-plain;
+  color: $font-color;
+  font-size: $default-font-size;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-color;
+  flex-grow: 1;
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: $font-fancy;
+    text-align: center;
+  }
+}
+
+#g-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: $accent-three;
+  flex-grow: 0;
+  flex-shrink: 0;
+  & #logo-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & img {
+      width: 65px;
+      border-radius: 50%;
+      border: 4px dotted $accent-one;
+    }
+  }
+  & #title-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    & h1 {
+      margin-bottom: 0px;
+    }
+    & h4 {
+      font-family: $font-plain;
+      margin-top: 0px;
+    }
+  }
+  & #navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    & h4 {
+      margin: 10px;
+      align-self: center;
+      text-decoration: none;
+      color: $accent-two;
+      font-size: $default-font-size * 1.25;
+      border: 6px double $accent-one;
+    padding: 5px;
+    border-radius: 20px;
+    }
+  }
+}
+
+#g-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: $accent-three;
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+  font-family: $font-plain;
+  & img {
+    max-width: 60px;
+    border-radius: 50%;
+    border: 4px dotted $accent-one;
+  }
+  & a {
+    margin: 10px;
+    align-self: center;
+    text-decoration: none;
+    color: $accent-one;
+    & h3 {
+      padding: 5px;
+      border: 6px double $accent-one;
+      border-radius: 20px;
+  }
+  }
+  & h3 {
+    font-family: $font-plain;
+  }
+}
+
+// ˏˋ°•*⁀➷ˏˋ°•*⁀➷ˏˋ°•*⁀➷ page/section styles
+#p-page {
+  margin-top: 20px;
+  & #map {
+    width: 100%;
+    height: 500px;
+    max-width: 600px;
+    border: 5px dashed $accent-two;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}
